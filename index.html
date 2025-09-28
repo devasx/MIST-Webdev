@@ -1,30 +1,76 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
 
-<html>
-    <head> 
-        <title>This is my website!</title>
+        <style>
+            input[style="text"]{
+                
+            }
+
+            #centrediv{
+                margin: auto;
+                width: 50%;
+                vertical-align: middle;
+                padding: 10px;
+            }
+            
+            body{
+                padding: 20px;
+                background-color: rgb(32, 33, 36);
+            }
+            #search{
+                margins: auto;
+                width: 50%;
+                background-color: grey;
+                padding: 10px;
+                color:white;
+                border-radius: 25px;
+            }
+            ::placeholder {
+                color: rgb(255, 255, 255);
+                opacity: 0.5; 
+            }
+
+            .topnav-right {
+                float: right;
+                color: white;
+            }
+
+            #search_button:hover{
+                border: grey solid 1px;
+            }
+
+            #search_button{
+                border-radius: 5px; 
+                background-color:rgb(48,49,52);
+                color:white
+            }
+
+        </style>
     </head>
-
     <body>
-        <form>
-            <input type="text" placeholder="Full Name" name="name">
-            <div>
-                <input type="radio" name="color" value="red">Red
-                <input type="radio" name="color" value="blue">Blue
-                <input type="radio" name="color" value="green">Green
-                <input type="radio" name="color" value="orange">Orange
-            </div>
+        <div>
+            <a href="https://youtu.be/QB7ACr7pUuE?si=On0UeNUlvEXJGSFU" target="_blank">
+                <img src="./images/logo.png" alt="Logo" height="50">
+            </a>
+            <div class="topnav-right">
+                <a href="https://mail.google.com" style="color:white">Gmail</a>
 
-            <div>
-                <input type="password" name="password" placeholder="enter password!">
+                <a href="https://images.google.com" style="color:white">Images</a>
+            </div>
+            
+        </div>
+        
+        <div id="centrediv">
+            <form action="https://www.google.com/search">
+                <h1><br><br><br><br></h1>
+                <center><img src="./images/logo2.png" alt="Logo" height="100"></center>
+                <center><input type="text" name="q" id="search" placeholder="Whats on your mind today?"></center>
+                <br>
+                <center><input type="submit" value="Googla Search" id="search_button"></center>
+            </form>
+        </div>
 
-            </div>
-            <div>
-                <input type="checkbox" name="classes" value="Chemistry">Chemistry
-                <input type="checkbox" name="classes" value="EMBS">EMBS
-                <input type="checkbox" name="classes" value="Maths">Maths
-            </div>
-            <input type="submit">
-        </form>
-    </body> 
+    </body>
 </html>
