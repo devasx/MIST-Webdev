@@ -2,76 +2,51 @@
 <html lang="en">
     <head>
         <title>Search</title>
-
-        <style>
-            input[style="text"]{
-                
-            }
-
-            #centrediv{
-                margin: auto;
-                width: 50%;
-                vertical-align: middle;
-                padding: 10px;
-            }
-            
-            body{
-                padding: 20px;
-                background-color: rgb(32, 33, 36);
-            }
-            #search{
-                margins: auto;
-                width: 50%;
-                background-color: grey;
-                padding: 10px;
-                color:white;
-                border-radius: 25px;
-            }
-            ::placeholder {
-                color: rgb(255, 255, 255);
-                opacity: 0.5; 
-            }
-
-            .topnav-right {
-                float: right;
-                color: white;
-            }
-
-            #search_button:hover{
-                border: grey solid 1px;
-            }
-
-            #search_button{
-                border-radius: 5px; 
-                background-color:rgb(48,49,52);
-                color:white
-            }
-
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <div>
-            <a href="https://youtu.be/QB7ACr7pUuE?si=On0UeNUlvEXJGSFU" target="_blank">
-                <img src="logo.png" alt="Logo" height="50">
-            </a>
-            <div class="topnav-right">
-                <a href="https://mail.google.com" style="color:white">Gmail</a>
 
-                <a href="https://images.google.com" style="color:white">Images</a>
+
+    <body class="dark:bg-[#202124] bg-white h-screen flex flex-col">
+        <div class="flex justify-between font-[Google Sans] text-[13px] mx-4 my-2">
+            <div class="items-center m-2">
+                <a href="https://youtu.be/QB7ACr7pUuE?si=On0UeNUlvEXJGSFU" class="dark:text-white text-black hover:underline">About</a>
+                <a href="https://store.google.com"  class="dark:text-white text-black hover:underline mx-3">Store</a>
+            </div>
+            <div class="flex items-center">
+                <a href="https://mail.google.com" class="dark:text-white text-black m-3 hover:underline">Gmail</a>
+
+                <a href="https://images.google.com" class="dark:text-white text-black hover:underline">Images</a>
+
+                <a href="https://labs.google.com/search?source=hp">
+                    <img src="images/flask.jpg" alt="flask" class="h-8 mx-4 hover:">
+                </a>
             </div>
             
         </div>
         
-        <div id="centrediv">
-            <form action="https://www.google.com/search">
-                <h1><br><br><br><br></h1>
-                <center><img src="logo2.png" alt="Logo" height="100"></center>
-                <center><input type="text" name="q" id="search" placeholder="Whats on your mind today?"></center>
-                <br>
-                <center><input type="submit" value="Googla Search" id="search_button"></center>
-            </form>
+        <div class="flex-grow flex items-center justify-center">
+            <div class="flex justify-center w-[1000px] mx-auto dark:bg-[#202124] bg-white">
+                <form action="https://www.google.com/search">
+                    
+                    <center><img src="./images/logo2.png" alt="Logo" class="h-32"></center>
+                    <br>
+                    <div class="w-[570px] h-12 rounded-full dark:bg-[#4d5156] bg-white border-[1px] border-[##dadce0] dark:border-[#4d5156] dark:focus-within:bg-[#303134] focus-within:bg-white flex shadow-[0_4px_0px_rgb(0_0_0_/_0.1)]">
+                        <img src="./images/search_icon.png" alt="search icon" class="h-10">
+                        <input type="text" name="q" class="w-full dark:bg-[#4d5156] bg-white dark:text-white dark:focus:bg-[#303134] focus:bg-white hover:shadow-2xl dark">
+                        <img src="./images/mic.png" alt="mic" class="h-8 p-1 mx-3 my-1.5 ">
+                    </div>
+                    <br>
+                    <div class="flex justify-center">
+                        <input type="submit" value="Google Search" class="m-2 h-10 w-[150px] rounded-[10px] dark:bg-[#303134] dark:text-white bg-[#f8f9fa] dark:hover:border-white dark:hover:border-[0.25px] hover:border-[#808080] hover:border-[0.25px] hover:shadow-[0_1.75px_0px_rgb(0_0_0_/_0.1)] ">
+                        <a href="https://doodles.google">
+                            <input type="button" value="I'm Feeling Lucky" class="m-2 h-10 w-[150px] rounded-[10px] dark:bg-[#303134] dark:text-white bg-[#f8f9fa] dark:hover:border-white dark:hover:border-[0.25px] hover:border-[#808080] hover:border-[0.25px] hover:shadow-[0_1.75px_0px_rgb(0_0_0_/_0.1)] ">
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
 
     </body>
 </html>
-
