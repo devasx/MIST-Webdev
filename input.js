@@ -140,6 +140,7 @@ equal.onclick = function(){
                 
             for (let j = 0; j<operations.length; j++){
                 if (operations[j] === "*" || operations[j] === "/"){
+                    let result;
                     if (operations[j] === "*"){
                         result = operations[j-1] * operations[j+1]; 
                     }
@@ -155,6 +156,7 @@ equal.onclick = function(){
 
             for (let j = 0; j<operations.length; j++){
                 if (operations[j] === "+" || operations[j] === "-"){
+                    let result;
                     if (operations[j] === "+"){
                         result = operations[j-1] + operations[j+1]; 
                     }
