@@ -96,7 +96,7 @@ deleteButton.onclick = function(){
         console.log(operations);
         index2--;
     }
-    else if (!isNaN(char) && isFinite(char) && screen.textContent !== ""){
+    else if ((!isNaN(char) && isFinite(char) && screen.textContent !== "") || char === "."){
         console.log('reached the number part');
 
         screen.textContent = screen.textContent.trim().slice(0,index2-1);
