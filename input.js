@@ -136,37 +136,38 @@ equal.onclick = function(){
         }
 
         if (!divideByZero){
-            for (let i = 0; i < operators.length; i++){
-                let oper = operators[i];
-                for (let j = 0; j<operations.length; j++){
-                    if (operations.indexOf(`${oper}`) !== -1){
-                        let iOper = operations.indexOf(`${oper}`);
-                        console.log(operations[iOper - 1], operations[iOper + 1]);
-                        if (operations[iOper + 1] == 0 && oper === "/"){
-                            window.alert("Division by 0 is not possible!");
-                            operations.pop();
-                        }
-                        else{
-                            let result;
-                            if (oper === "/"){
-                                result = operations[iOper - 1] / operations[iOper + 1];
-                            }
-                            else if (oper === "*"){
-                                result = operations[iOper - 1] * operations[iOper + 1];
-                            }
-                            else if (oper === "+"){
-                                result = operations[iOper - 1] + operations[iOper + 1];
-                            }
-                            else if (oper === "-"){
-                                result = operations[iOper - 1] - operations[iOper + 1];
-                            }
-                            operations[iOper - 1] = result;
-                            operations.splice(iOper, 2);
-                            console.log(operations);
-                        }
+            
+                
+            for (let j = 0; j<operations.length; j++){
+                if (operations[j] === "*" || operations[j] === "/"){
+                    if (operations[j] === "*"){
+                        result = operations[j-1] * operations[j+1]; 
                     }
+                    else{
+                        result = operations[j - 1] / operations[j+1];
+                    }
+                    operations[j - 1] = result;
+                    operations.splice(j, 2);
+                    console.log(operations);
+                    j -= 2;
                 }
             }
+
+            for (let j = 0; j<operations.length; j++){
+                if (operations[j] === "+" || operations[j] === "-"){
+                    if (operations[j] === "+"){
+                        result = operations[j-1] + operations[j+1]; 
+                    }
+                    else{
+                        result = operations[j - 1] - operations[j+1];
+                    }
+                    operations[j - 1] = result;
+                    operations.splice(j, 2);
+                    console.log(operations);
+                    j -= 2;
+                }
+            }
+            
             screen.textContent = operations[0];
 
             index = 0;
